@@ -1,0 +1,144 @@
+﻿
+@{
+    ViewBag.Title = "User";
+}
+
+<style>
+    .cintaOpcion {
+        margin: 100px 10% 20px 10px;
+    }
+
+    .btnAdd {
+        padding: 5px 20px 5px 20px;
+    }
+</style>
+
+<div class="row cintaOpcion">
+    <h2 style="margin-left:10%">
+        Gestión de Usuarios
+        <small>Permite Gestionar usurios de la plataforma</small>
+        <input type="button" class="btn btn-primary btnAdd pull-right" value="Nuevo" id="btnNuevo" />
+    </h2>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Búsqueda
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Registrados Desde:</label>
+                            <div class='input-group date datetimepicker' id='dtFechaIFiltro'>
+                                <input type='text' class="form-control" id="txtFechaI" name="txtFechaI" maxlength="10" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Registrados Hasta:</label>
+                            <div class='input-group date datetimepicker' id='dtFechaFFiltro'>
+                                <input type='text' class="form-control" id="txtFechaF" name="txtFechaF" maxlength="10" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input class="form-control" type="text" id="txtNombre" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-8">
+                        <div class="pull-right">
+                            <input type="button" class="btn btn-primary" value="Buscar" id="btnBuscar" />
+                            <input type="button" class="btn btn-danger" value="Limpiar" id="btnLimpiar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="table-responsive">
+            <table id="tblRegistros" class="table table-bordered table-striped table-responsive" data-unique-id="UserId">
+                <thead>
+                    <tr>
+                        <th data-formatter="rowNumFormatter" data-halign="center" data-valign="middle" data-align="center" data-width="30">#</th>
+                        <th data-field="FullName" data-valign="middle" data-align="center">Nombre Completo</th>
+                        <th data-field="strDNI" data-valign="middle" data-align="center">DNI</th>
+                        <th data-field="FechaCreacionToString" data-valign="middle" data-align="center">Fecha de Registro</th>
+                        <th data-field="MobilePhone" data-valign="middle" data-align="center">Celular</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4>Registro de Usuario</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form id="frmRegistro">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Nombres:</label>
+                                    <input name="txtNombres" type="text" class="form-control"  id="txtNombres">
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellidos:</label>
+                                    <input name="txtApellidos" type="text" class="form-control" id="txtApellidos">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Email:</label>
+                                    <input name="txtEmail" type="text" class="form-control" id="txtEmail">
+                                </div>
+                                <div class="form-group">
+                                    <label>DNI:</label>
+                                    <input name="txtDni" type="text" class="form-control" maxlength="8"  id="txtDni">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label>Celular:</label>
+                                    <input name="txtCelular" type="text" class="form-control" maxlength="11" id="txtCelular">
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div style="margin-right: 13px">
+                    <button type="button" class="btn btn-default" id="btnCerrar" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/App/user.js"></script>

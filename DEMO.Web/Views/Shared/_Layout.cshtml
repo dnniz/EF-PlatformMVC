@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <script type="text/javascript">
+        var siteRoot = "@Url.Content("~/")";
+    </script>
+    <link href="~/Content/Css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/font-awesomw.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/bootstrap-timepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="~/Content/Css/style.css" media="screen" rel="stylesheet" />
+
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/moment.min.js"></script>
+    <script src="~/Content/Scripts/moment-with-locales.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/Content/Scripts/bootstrap-table.min.js"></script>
+    <script src="~/Content/Scripts/jquery-ui.js"></script>
+    <script src="~/Content/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="~/Content/Scripts/locales/bootstrap-table-es-SP.min.js"></script>
+    <script src="~/Content/Scripts/moment.locale.js"></script>
+    <script src="~/Content/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap-timepicker.min.js"></script>
+    <script src="~/Content/Scripts/util.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+</body>
+</html>

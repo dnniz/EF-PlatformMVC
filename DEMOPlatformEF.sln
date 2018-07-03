@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{05119803-30D5-44F9-9C44-EB8B60ED3562}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{4D76719F-4BA7-42F2-9545-36C76F4996D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5B13820F-2D98-4782-A910-0FB530A0652E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{DF408183-BAD0-4C51-9FB1-C32E68B60C69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO.Entity", "DEMO.Entity\DEMO.Entity.csproj", "{E2B87EC1-87E5-4064-948E-5B9E40B763EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO.Data", "DEMO.Data\DEMO.Data.csproj", "{0107072C-648E-4507-BC1E-DAF34D1BFBBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO.Web", "DEMO.Web\DEMO.Web.csproj", "{8D46818B-BBBE-4EB0-A8EA-DD1E54011282}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEMO.Services", "DEMO.Services\DEMO.Services.csproj", "{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2B87EC1-87E5-4064-948E-5B9E40B763EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B87EC1-87E5-4064-948E-5B9E40B763EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B87EC1-87E5-4064-948E-5B9E40B763EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B87EC1-87E5-4064-948E-5B9E40B763EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0107072C-648E-4507-BC1E-DAF34D1BFBBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0107072C-648E-4507-BC1E-DAF34D1BFBBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0107072C-648E-4507-BC1E-DAF34D1BFBBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0107072C-648E-4507-BC1E-DAF34D1BFBBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D46818B-BBBE-4EB0-A8EA-DD1E54011282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D46818B-BBBE-4EB0-A8EA-DD1E54011282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D46818B-BBBE-4EB0-A8EA-DD1E54011282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D46818B-BBBE-4EB0-A8EA-DD1E54011282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2B87EC1-87E5-4064-948E-5B9E40B763EA} = {05119803-30D5-44F9-9C44-EB8B60ED3562}
+		{0107072C-648E-4507-BC1E-DAF34D1BFBBA} = {4D76719F-4BA7-42F2-9545-36C76F4996D7}
+		{8D46818B-BBBE-4EB0-A8EA-DD1E54011282} = {DF408183-BAD0-4C51-9FB1-C32E68B60C69}
+		{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E} = {5B13820F-2D98-4782-A910-0FB530A0652E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9344B824-90B6-473F-8F48-067625F4BFB5}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://gurrenlagann.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DEMO.Entity\\DEMO.Entity.csproj
+		SccProjectTopLevelParentUniqueName1 = DEMOPlatformEF.sln
+		SccProjectName1 = DEMO.Entity
+		SccLocalPath1 = DEMO.Entity
+		SccProjectUniqueName2 = DEMO.Data\\DEMO.Data.csproj
+		SccProjectTopLevelParentUniqueName2 = DEMOPlatformEF.sln
+		SccProjectName2 = DEMO.Data
+		SccLocalPath2 = DEMO.Data
+		SccProjectUniqueName3 = DEMO.Web\\DEMO.Web.csproj
+		SccProjectTopLevelParentUniqueName3 = DEMOPlatformEF.sln
+		SccProjectName3 = DEMO.Web
+		SccLocalPath3 = DEMO.Web
+		SccProjectUniqueName4 = DEMO.Services\\DEMO.Services.csproj
+		SccProjectTopLevelParentUniqueName4 = DEMOPlatformEF.sln
+		SccProjectName4 = DEMO.Services
+		SccLocalPath4 = DEMO.Services
+	EndGlobalSection
+EndGlobal
