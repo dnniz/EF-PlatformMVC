@@ -11,4 +11,4 @@ Desarrollo base de aplicación web ASP .NET MVC
 * BootstrapTable
 * DateTimePicker
 
-Revisar Rama: Desarrollo
+Revisar Branch: Desarrollo
