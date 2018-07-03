@@ -1,9 +1,8 @@
 # EF-PlatformMVC
 
-Desarrollo base de aplicación web ASP .NET MVC
-Arquitectura N-CAPAS
-
-___Frameworks, Tecnologías y librerias usadas
+<h3><b>Desarrollo base de aplicación web ASP .NET MVC</b></h3>
+<h4>Arquitectura N-CAPAS</h4>
+<b>Frameworks, Tecnologías y librerias usadas</b>
 
 * Entity Framework 6.2 Code First
 * Linq
@@ -12,4 +11,6 @@ ___Frameworks, Tecnologías y librerias usadas
 * BootstrapTable
 * DateTimePicker
 
-Revisar Branch: Desarrollo
+>>**Revisar Branch: Desarrollo**
+
+
