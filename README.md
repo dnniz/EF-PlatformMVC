@@ -1,8 +1,9 @@
 # EF-PlatformMVC
 
 Desarrollo base de aplicación web ASP .NET MVC
+Arquitectura N-CAPAS
 
-- Frameworks, Tecnologías y librerias usadas
+___Frameworks, Tecnologías y librerias usadas
 
 * Entity Framework 6.2 Code First
 * Linq
