@@ -11,7 +11,7 @@
 * BootstrapTable
 * DateTimePicker
 * JqueryValidate
-
->>**Revisar Branch: Desarrollo**
-
+>>
+>> ************Revisar Branch: Desarrollo**************
+>>
 
