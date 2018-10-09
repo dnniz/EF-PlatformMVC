@@ -37,9 +37,12 @@ const ajaxCall = (serviceName, dataString, ajaxSuccess, ajaxComplete, type = $_G
         data: dataString,
         success: ajaxSuccess,
         complete: ajaxComplete,
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            $("#ModalConexion").modal("show");
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.responseText);
         },
+        //error: function (XMLHttpRequest, textStatus, errorThrown) {
+        //    $("#ModalConexion").modal("show");
+        //},
         async: async
     });
 }
@@ -58,11 +61,18 @@ const addUser = () => {
         };
 
         let ajaxSucces = (data) => {
-            $table.bootstrapTable('refresh');
+            if (data.Done) {
+                $table.bootstrapTable('refresh');
+            } else {
+                $.each(data.Errors, function () {
+                    alert(this.ErrorMessage);
+                });
+            }
         }
 
         let ajaxComplete = () => {
             $("#myModal").modal('hide');
+            limpiarRegistros();
         }
 
         ajaxCall("AddUser", JSON.stringify(params), ajaxSucces, ajaxComplete, $_POST);

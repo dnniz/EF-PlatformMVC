@@ -1,6 +1,8 @@
-﻿using DEMO.Entity;
+﻿using AutoMapper;
+using DEMO.Entity;
 using DEMO.Services.Interface;
 using DEMO.Web.Models;
+using DEMO.Web.Models.Validation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +16,17 @@ namespace DEMO.Web.Controllers
         // GET: Configuration
         public ActionResult Index()
         {
-            return View();
+            int zero;
+            var listUser = DBProviderManager<UserIProvider>.Provider.GetUsersByType(null, null, null, null, 0, 0, out zero);
+
+            //Chrome sessionId = j3jnguxblec1h03d2uhml5wm
+            //Firefox sessionId = zg3s0udd4awnh125dof1yw2x
+            var sessionId = Session.SessionID;
+            //Session["test"] = "FirstUser";
+            //var userValid = Session[0];
+            return View(listUser);
         }
+
 
         public ActionResult User()
         {
@@ -23,15 +34,39 @@ namespace DEMO.Web.Controllers
 
             return View(model);
         }
-
-        public JsonResult AddUser(User user)
+        public class Data
         {
-            var model = new JsonDTO();
+            public string message { get; set; }
+        }
+        public JsonResult AddUser(UserViewModel model)
+        {
+            var response = new UserViewModel();
+            
+            if (!ModelState.IsValid)
+            {
+                //Código para enviar errores del modelo
+                response.Errors = new UserValidator().Validate(model).Errors;
+                response.ModelValid = ModelState.IsValid;
+            }
 
+            //Mapeo de propiedades
+            var user = Mapper.Map<User>(model);
+
+            //Ejecución en Base de Datos
             DBProviderManager<UserIProvider>.Provider.AddUser(user, "admin");
 
-            return Json(model);
+            return Json(response);
         }
+
+
+        //public JsonResult AddUser(User user)
+        //{
+        //    var model = new JsonDTO();
+
+        //    DBProviderManager<UserIProvider>.Provider.AddUser(user, "admin");
+
+        //    return Json(model);
+        //}
 
         public JsonResult ListUsers(string nombre, DateTime? fechaI, DateTime? fechaF, bool? flagActivo, int pageNumber, int pageSize)
         {

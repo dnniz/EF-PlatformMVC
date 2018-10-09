@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tools;
 
 namespace DEMO.Services.Implementation
 {
@@ -42,7 +43,10 @@ namespace DEMO.Services.Implementation
             }
             catch (Exception ex)
             {
-                // Log
+                //LogManager.Instance.LogError("RegisterTimeConfiguration", ex);
+                throw new AppException(AppExceptionIds.User
+                    , "Se produjo un error al registrar el usuario"
+                    , new object[] { null });
             }
         }
 
@@ -63,15 +67,19 @@ namespace DEMO.Services.Implementation
 
 
                     IRepository<User> rep = new EfRepository<User>(context);
-                    var registros = rep.Table.Where(x => x.FlagActivo
+                    var registros = rep.Table.Where(x => 
+                                                    (x.FlagActivo == flagActivo || !flagActivo.HasValue)
                                                      && (x.FechaCreacion >= dtFechaI || !dtFechaI.HasValue)
                                                      && (x.FechaCreacion <= dtFechaF || !dtFechaF.HasValue)
                                                      && !x.FlagEliminado
                                                       && ((x.FirstName.Replace(" ", "").Trim() + x.LastName.Replace(" ", "").Trim()).ToUpper().Contains(nombreComplex.ToUpper()) || string.IsNullOrEmpty(nombre))
                                                     );
+                    total = registros.Count();
 
-                    total = registros.ToList().Count;
-
+                    if (pageSize == 0 && pageNumber == 0)
+                    {
+                        return registros.ToList();
+                    }
                     var listaFinal = registros.OrderBy(x => x.FirstName).Skip((pageNumber - 1) * pageSize).Take(pageSize).Distinct();
 
                     return listaFinal.ToList();

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AutoMapper;
+using DEMO.Entity;
+using DEMO.Web.Models;
+using FluentValidation.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +20,16 @@ namespace DEMO.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //Inicializando el mapeo de clases
+            Mapper.Initialize(conf =>
+            {
+                conf.CreateMap<UserViewModel, User>();
+            });
+
+            //Inicializando validacion de modelo
+            FluentValidationModelValidatorProvider.Configure();
+
         }
     }
 }

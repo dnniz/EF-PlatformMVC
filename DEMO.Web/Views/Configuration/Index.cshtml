@@ -1,7 +1,26 @@
-﻿
+﻿@model System.Collections.Generic.IEnumerable<DEMO.Entity.User>
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
+<h3>List of person</h3>
+<div class="person-list">
+    <table class="table table-bordered" data-bind="Model">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>DNI</th>
+                <th>Cel</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach Users">
+            <tr>
+                <td data-bind="FullName"></td>
+                <td data-bind="strDNI"></td>
+                <td data-bind="MobilePhone"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

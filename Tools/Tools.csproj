@@ -4,17 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4F126CD-6A4F-436A-9CDF-828BD1B9A46E}</ProjectGuid>
+    <ProjectGuid>{5E9B0221-D249-496F-A1CD-DC1D4C7DBDF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DEMO.Services</RootNamespace>
-    <AssemblyName>DEMO.Services</AssemblyName>
+    <RootNamespace>Tools</RootNamespace>
+    <AssemblyName>Tools</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,14 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,29 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\UserProvider.cs" />
-    <Compile Include="Interface\BaseDBProvider.cs" />
-    <Compile Include="Interface\BDProviderManager.cs" />
-    <Compile Include="Interface\UserIProvider.cs" />
+    <Compile Include="AppException.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DEMO.Data\DEMO.Data.csproj">
-      <Project>{0107072C-648E-4507-BC1E-DAF34D1BFBBA}</Project>
-      <Name>DEMO.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DEMO.Entity\DEMO.Entity.csproj">
-      <Project>{E2B87EC1-87E5-4064-948E-5B9E40B763EA}</Project>
-      <Name>DEMO.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{5E9B0221-D249-496F-A1CD-DC1D4C7DBDF8}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
