@@ -23,6 +23,7 @@ namespace DEMO.Data
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             modelBuilder.Entity<User>();
+            modelBuilder.Entity<Solicitude>().HasRequired(x => x.User);
 
             base.OnModelCreating(modelBuilder);
         }

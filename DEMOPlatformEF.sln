@@ -63,4 +63,30 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9344B824-90B6-473F-8F48-067625F4BFB5}
 	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://gurrenlagann.visualstudio.com/
+		SccProjectUniqueName0 = DEMO.Entity\\DEMO.Entity.csproj
+		SccProjectTopLevelParentUniqueName0 = DEMOPlatformEF.sln
+		SccProjectName0 = DEMO.Entity
+		SccLocalPath0 = DEMO.Entity
+		SccProjectUniqueName1 = DEMO.Data\\DEMO.Data.csproj
+		SccProjectTopLevelParentUniqueName1 = DEMOPlatformEF.sln
+		SccProjectName1 = DEMO.Data
+		SccLocalPath1 = DEMO.Data
+		SccProjectUniqueName2 = DEMO.Web\\DEMO.Web.csproj
+		SccProjectTopLevelParentUniqueName2 = DEMOPlatformEF.sln
+		SccProjectName2 = DEMO.Web
+		SccLocalPath2 = DEMO.Web
+		SccProjectUniqueName3 = DEMO.Services\\DEMO.Services.csproj
+		SccProjectTopLevelParentUniqueName3 = DEMOPlatformEF.sln
+		SccProjectName3 = DEMO.Services
+		SccLocalPath3 = DEMO.Services
+		SccLocalPath4 = .
+		SccProjectUniqueName5 = Tools\\Tools.csproj
+		SccProjectTopLevelParentUniqueName5 = DEMOPlatformEF.sln
+		SccProjectName5 = Tools
+		SccLocalPath5 = Tools
+	EndGlobalSection
 EndGlobal
